@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">activity_scrolling</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+  <string name="descripcion_boton"> Agregar </string>
+    <string name="action_settings">Settings</string>
+    <string name="descripcion">Añadir a Paquito al grupo de sd,kfgjaljkhgbalbhla.kb </string>
+    <string name="Películas"> Lista Películas</string>
+    <string name="large_text"></string>
 </resources>
