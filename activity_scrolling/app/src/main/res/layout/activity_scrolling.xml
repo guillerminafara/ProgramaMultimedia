@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".ScrollingActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,32 +21,232 @@
         >
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="300dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="10dp"
             >
-            <ImageView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:src="@drawable/piratas"
-                android:scaleType="matrix">
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/Imagen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/piratas">
 
-            </ImageView>
+                </ImageView>
+                <TextView
+                    android:id="@+id/Titulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Piratas"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Imagen1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Descripcion"
+                    android:layout_margin="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Titulo"
+                    >
+
+                </TextView>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/wiki"
+                    android:layout_margin="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    ></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="300dp"
             android:layout_marginBottom="10dp"
-
             app:cardCornerRadius="10dp"
-
             >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/Imagen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/piratas">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/Titulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/InsideOut"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Imagen2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/insideDescripcion"
+                    android:layout_margin="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Titulo2"
+                    >
+
+                </TextView>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/wiki"
+                    android:layout_margin="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    ></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/Imagen3"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/piratas">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/Titulo3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen3"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Imagen3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Descripcion3"
+                    android:layout_margin="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Titulo3"
+                    >
+
+                </TextView>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/wiki"
+                    android:layout_margin="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    ></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/Imagen4"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/piratas">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/Titulo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/imagen4"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/Imagen4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Descripcion4"
+                    android:layout_margin="10dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Titulo4"
+                    >
+
+                </TextView>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="@string/wiki"
+                    android:layout_margin="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    ></Button>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+    </ScrollView>
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/Bottom"
         android:layout_width="match_parent"
