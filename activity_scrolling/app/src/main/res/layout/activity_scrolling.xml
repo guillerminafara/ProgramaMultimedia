@@ -64,6 +64,7 @@
 
                 </TextView>
                 <Button
+                    android:id="@+id/Boton1"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="@string/wiki"
@@ -120,6 +121,7 @@
 
                 </TextView>
                 <Button
+                    android:id="@+id/Boton2"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="@string/wiki"
@@ -177,6 +179,7 @@
 
                 </TextView>
                 <Button
+                    android:id="@+id/Boton3"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="@string/wiki"
@@ -233,6 +236,7 @@
 
                 </TextView>
                 <Button
+                    android:id="@+id/Boton4"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="@string/wiki"
