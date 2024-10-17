@@ -15,4 +15,5 @@
     <string name="imagen4">La Princesa Mononoke</string>
     <string name="Descripcion4">es una película de animación japonesa escrita y dirigida por Hayao Miyazaki, estrenada en 1997.2</string>
     <string name="wiki">Ver en Wikipedia</string>
+  <string name="agregar">+</string>
 </resources>

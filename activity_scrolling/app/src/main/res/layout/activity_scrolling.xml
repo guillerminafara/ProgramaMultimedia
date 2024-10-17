@@ -9,15 +9,16 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:background="@color/fondo"
+        android:padding="20dp"
         >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/fondo"
-        android:orientation="vertical"
 
-        android:padding="20dp"
+        android:orientation="vertical"
+        android:paddingBottom="100dp"
+
         >
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -66,12 +67,15 @@
                 <Button
                     android:id="@+id/Boton1"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:text="@string/wiki"
                     android:layout_margin="8dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    ></Button>
+
+                    >
+
+                </Button>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -123,12 +127,14 @@
                 <Button
                     android:id="@+id/Boton2"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:text="@string/wiki"
                     android:layout_margin="8dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    ></Button>
+                    >
+
+                </Button>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -181,12 +187,14 @@
                 <Button
                     android:id="@+id/Boton3"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:text="@string/wiki"
                     android:layout_margin="8dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    ></Button>
+                    >
+
+                </Button>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -238,12 +246,14 @@
                 <Button
                     android:id="@+id/Boton4"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="48dp"
                     android:text="@string/wiki"
                     android:layout_margin="8dp"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    ></Button>
+                    >
+
+                </Button>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -255,7 +265,7 @@
         android:id="@+id/Bottom"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:backgroundTint="@color/azul"
+        android:backgroundTint="@color/morado"
         android:layout_gravity="bottom"
         app:fabAlignmentMode="end"
         app:fabCradleRoundedCornerRadius="100dp"
@@ -275,11 +285,15 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/morado"
         android:importantForAccessibility="no"
         app:layout_anchor="@id/Bottom"
-
+        android:layout_marginBottom="75dp"
+        android:src="@drawable/plus"
+        app:tint="@color/white"
+        android:elevation="8dp"
+        android:translationZ="12dp"
         >
-
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
