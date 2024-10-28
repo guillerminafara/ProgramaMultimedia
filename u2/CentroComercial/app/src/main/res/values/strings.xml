@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CentroComercial</string>
+    <string name="botom"> Botom app Bar</string>
+    <string name="titulo1">Nuevo Centro</string>
+    <string name="direccion1"> Av. de Pius XII, 2, Campanar,València, Valencia</string>
+    <string name="tiendas">250 tiendas</string>
+</resources>
