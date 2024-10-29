@@ -6,6 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity"
     >
     <ScrollView
@@ -15,18 +16,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="25dp">
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="175dp"
             android:backgroundTint="@color/Rosa2"
             app:cardCornerRadius="15dp"
+            android:layout_marginBottom="20dp"
             >
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 >
                 <ImageView
+                    android:id="@+id/ImagenCentro1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -68,6 +73,71 @@
                     >
 
                 </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:backgroundTint="@color/Rosa2"
+            app:cardCornerRadius="15dp"
+            android:layout_marginBottom="20dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/ImagenCentro2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/titulo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titulo2"
+                    app:layout_constraintBottom_toTopOf="@id/direccion2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp">
+
+                </TextView>
+                <TextView
+                    android:id="@+id/direccion2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:text="@string/direccion2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:text="@string/tiendas2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    >
+
+                </TextView>
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

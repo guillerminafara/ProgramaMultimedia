@@ -4,4 +4,8 @@
     <string name="titulo1">Nuevo Centro</string>
     <string name="direccion1"> Av. de Pius XII, 2, Campanar,València, Valencia</string>
     <string name="tiendas">250 tiendas</string>
+    <string name="titulo2">El Saler</string>
+    <string name="direccion2">Av. del Professor López Piñero, 16</string>
+    <string name="tiendas2">160 tiendas</string>
+
 </resources>
