@@ -7,5 +7,12 @@
     <string name="titulo2">El Saler</string>
     <string name="direccion2">Av. del Professor López Piñero, 16</string>
     <string name="tiendas2">160 tiendas</string>
+    <string name="titulo3">Bonaire</string>
+    <string name="direccion3">Autovía del Este, Km. 345, Valencia</string>
+    <string name="tiendas3">123 tiendas</string>
+    <string name="titulo4">El Manar</string>
+    <string name="direccion4">Plaça Industrial el Manar, 3, València,</string>
+    <string name="tiendas4">17 tiendas</string>
+
 
 </resources>

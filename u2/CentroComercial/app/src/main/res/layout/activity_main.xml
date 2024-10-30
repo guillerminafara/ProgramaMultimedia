@@ -20,9 +20,10 @@
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
             android:layout_width="match_parent"
             android:layout_height="175dp"
-            android:backgroundTint="@color/Rosa2"
+
             app:cardCornerRadius="15dp"
             android:layout_marginBottom="20dp"
             >
@@ -33,8 +34,12 @@
                 <ImageView
                     android:id="@+id/ImagenCentro1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
+                    android:layout_height="match_parent"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:src="@drawable/descargaa">
                 </ImageView>
                 <TextView
                     android:id="@+id/titulo"
@@ -45,7 +50,10 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:ignore="MissingConstraints"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp">
 
                 </TextView>
                 <TextView
@@ -58,6 +66,8 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     >
 
                 </TextView>
@@ -70,6 +80,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     >
 
                 </TextView>
@@ -78,11 +90,81 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+            android:id="@+id/card2"
+        app:cardCornerRadius="15dp"
+        android:layout_marginBottom="20dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/ImagenCentro2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
 
+            </ImageView>
+            <TextView
+                android:id="@+id/titulo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo2"
+                app:layout_constraintBottom_toTopOf="@id/direccion2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:ignore="MissingConstraints"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                >
+
+            </TextView>
+            <TextView
+                android:id="@+id/direccion2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                android:text="@string/direccion2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                >
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+                android:text="@string/tiendas2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                >
+
+            </TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="175dp"
-            android:backgroundTint="@color/Rosa2"
+            android:id="@+id/card3"
             app:cardCornerRadius="15dp"
             android:layout_marginBottom="20dp"
             >
@@ -91,7 +173,7 @@
                 android:layout_height="match_parent"
                 >
                 <ImageView
-                    android:id="@+id/ImagenCentro2"
+                    android:id="@+id/ImagenCentro3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="matrix"
@@ -101,27 +183,32 @@
 
                 </ImageView>
                 <TextView
-                    android:id="@+id/titulo2"
+                    android:id="@+id/titulo3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/titulo2"
-                    app:layout_constraintBottom_toTopOf="@id/direccion2"
+                    android:text="@string/titulo3"
+                    app:layout_constraintBottom_toTopOf="@id/direccion3"
                     app:layout_constraintLeft_toLeftOf="parent"
                     tools:ignore="MissingConstraints"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="20dp">
 
                 </TextView>
                 <TextView
-                    android:id="@+id/direccion2"
+                    android:id="@+id/direccion3"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     tools:ignore="MissingConstraints"
-                    android:text="@string/direccion2"
+                    android:text="@string/direccion3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     android:layout_marginLeft="10dp"
                     android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
                     >
 
                 </TextView>
@@ -129,11 +216,84 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:ignore="MissingConstraints"
-                    android:text="@string/tiendas2"
+                    android:text="@string/tiendas3"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    >
+
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:id="@+id/card4"
+            app:cardCornerRadius="15dp"
+            android:layout_marginBottom="20dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ImageView
+                    android:id="@+id/ImagenCentro4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="matrix"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/titulo4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/titulo4"
+                    app:layout_constraintBottom_toTopOf="@id/direccion4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    >
+
+                </TextView>
+                <TextView
+                    android:id="@+id/direccion4"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:text="@string/direccion3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingConstraints"
+                    android:text="@string/tiendas3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     >
 
                 </TextView>
@@ -172,3 +332,4 @@
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!--android:backgroundTint="@color/Rosa2"-->
