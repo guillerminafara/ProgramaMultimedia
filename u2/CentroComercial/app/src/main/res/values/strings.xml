@@ -14,5 +14,11 @@
     <string name="direccion4">Plaça Industrial el Manar, 3, València,</string>
     <string name="tiendas4">17 tiendas</string>
 
+    <string-array name="locales">
+        <item name="local">100 Montaditos</item>
+        <item name="local">Primor</item>
+        <item name="local">Queen Nails</item>
+
+    </string-array>
 
 </resources>

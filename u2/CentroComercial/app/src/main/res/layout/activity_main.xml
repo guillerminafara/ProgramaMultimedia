@@ -72,6 +72,7 @@
 
                 </TextView>
                 <TextView
+                    android:id="@+id/tiendas1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:ignore="MissingConstraints"
@@ -302,6 +303,10 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+<!--        <RecyclerView-->
+<!--            android:id="@+id/recyclerViewCentros"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
     </LinearLayout>
 
 

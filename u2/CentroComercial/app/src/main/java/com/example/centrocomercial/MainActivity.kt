@@ -1,16 +1,18 @@
 package com.example.centrocomercial
 
-import android.app.Activity
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.centrocomercial.Clases.CCProvider
+import com.example.centrocomercial.Clases.Tienda
+import com.example.centrocomercial.Clases.centrosComerciales
+import com.example.centrocomercial.adapter.CCAdapter
 
 import com.example.centrocomercial.databinding.ActivityMainBinding
 
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun cambioPantalla(card:CardView){
+
         card.setOnClickListener{
             val intent= Intent(this, MainActivity2::class.java)
             startActivity(intent)
@@ -44,7 +47,12 @@ class MainActivity : AppCompatActivity() {
         Glide.with(this).load(linnk).into(imagen)
 
     }
+    fun initRecyclerView(){
+        val recyclerView=findViewById<RecyclerView>(R.id.recyclerViewCentros)
+        recyclerView.layoutManager=LinearLayoutManager(this)
+        recyclerView.adapter=CCAdapter(CCProvider.centrosList)
 
+    }
     override fun onStart(){
         super.onStart()
         mplayer = MediaPlayer.create(this,R.raw.vivelavida)
