@@ -4,9 +4,8 @@ import android.content.Intent
 import android.media.MediaPlayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
 import androidx.recyclerview.widget.LinearLayoutManager
-
+import androidx.recyclerview.widget.RecyclerView
 import com.example.centrocomerciall.databinding.ActivityMainBinding
 import com.example.centrocomerciall.adapter.CCAdapter
 import com.example.centrocomerciall.clases.CCProvider
@@ -25,10 +24,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         pasarInfo()
     }
-//    fun mostrar(){
-//        binding.recyclerViewCentros.layoutManager=LinearLayoutManager(this)
-//        binding.recyclerViewCentros.adapter=CCAdapter(centrosList = CCProvider.centrosList){}
-//    }
+    fun mostrar(){
+        binding.recyclerViewCentros.layoutManager=LinearLayoutManager(this)
+        binding.recyclerViewCentros.adapter=CCAdapter(centrosList = CCProvider.centrosList){}
+    }
     fun pasarInfo(){
 
 //        val recyclerViewCC=findViewById<RecyclerView>(R.id.recyclerViewCentros)
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 
     override fun onStart(){
         super.onStart()
@@ -73,6 +73,11 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
     }
+
+
+//    override fun onCliick(centro: CentrosComerciales, id:Int ) {
+//        Toast.makeText(this, "$id, ${centro.getCentrosPorId(id)}", Toast.LENGTH_SHORT).show()
+//    }
 
 }
 

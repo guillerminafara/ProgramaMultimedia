@@ -44,8 +44,8 @@ class CCAdapter ( private val centrosList: List<CentrosComerciales>,
             ccNombre.text=centrosComercialesModel.nombre
             ccDireccion.text=centrosComercialesModel.ubicacion
             ccTiendas.text=centrosComercialesModel.tiendas
-            Glide.with(itemView.context).load(centrosComercialesModel).into(ccImage)
-
+//            Glide.with(itemView.context).load(centrosComercialesModel).into(ccImage)
+            Glide.with(itemView.context).load(centrosComercialesModel.url).into(ccImage)
             itemView.setOnClickListener{
                 onClick(centrosComercialesModel)
             }
