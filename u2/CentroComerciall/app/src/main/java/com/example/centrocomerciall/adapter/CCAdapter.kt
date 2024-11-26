@@ -1,6 +1,6 @@
 package com.example.centrocomerciall.adapter
 
-import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,18 +10,18 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.centrocomerciall.R
-import com.example.centrocomerciall.clases.CCProvider
 import com.example.centrocomerciall.clases.CentrosComerciales
 
 class CCAdapter ( private val centrosList: List<CentrosComerciales>,
-                  private val onClick: (CentrosComerciales) -> Unit) :
+//                  private val onClick: (CentrosComerciales)
+                  private val funcion: (centroC:CentrosComerciales)-> Unit) :
     RecyclerView.Adapter<CCAdapter.CCViewHolder>(){
 
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CCViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return CCViewHolder(layoutInflater.inflate(R.layout.activity_main2, parent, false))
+        return CCViewHolder(layoutInflater.inflate(R.layout.centro, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +30,7 @@ class CCAdapter ( private val centrosList: List<CentrosComerciales>,
 
     override fun onBindViewHolder(holder: CCViewHolder, position: Int) {
        val item = centrosList[position]
-        return holder.bind(item)
+        return holder.bind(item,funcion)
     }
     inner class CCViewHolder(view: View):RecyclerView.ViewHolder(view){
         val ccCard=view.findViewById<CardView>(R.id.card1)
@@ -39,15 +39,14 @@ class CCAdapter ( private val centrosList: List<CentrosComerciales>,
         val ccTiendas=view.findViewById<TextView>(R.id.tiendas)
         val ccImage=view.findViewById<ImageView>(R.id.imageCentro1)
 
-        fun bind(centrosComercialesModel:CentrosComerciales){
-
+        fun bind(centrosComercialesModel:CentrosComerciales, funcion: (centroC: CentrosComerciales) -> Unit){
             ccNombre.text=centrosComercialesModel.nombre
             ccDireccion.text=centrosComercialesModel.ubicacion
             ccTiendas.text=centrosComercialesModel.tiendas
-//            Glide.with(itemView.context).load(centrosComercialesModel).into(ccImage)
             Glide.with(itemView.context).load(centrosComercialesModel.url).into(ccImage)
-            itemView.setOnClickListener{
-                onClick(centrosComercialesModel)
+            ccCard.setOnClickListener{
+                Log.d("CCAdapter", "Centro seleccionado: ${centrosComercialesModel.nombre}")
+                funcion(centrosComercialesModel)
             }
         }
     }
