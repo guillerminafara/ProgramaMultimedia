@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 //        mplayer?.isLooping =true
-
         setContentView(binding.root)
         pasarInfo()
     }

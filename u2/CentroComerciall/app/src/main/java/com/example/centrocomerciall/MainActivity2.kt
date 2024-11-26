@@ -43,11 +43,9 @@ class MainActivity2 : AppCompatActivity() {
 
                 lista = centrosCom.listaTiendas
                 pasarInfo(lista)
-
             } else {
                 Log.e("MainActivity2", "Centro no encontrado para ID: $centros")
                 Toast.makeText(this, "No se recibió información del centro", Toast.LENGTH_SHORT).show()
-
             }
         }else{
             Toast.makeText(this, "No se recibió información del centro", Toast.LENGTH_SHORT).show()
