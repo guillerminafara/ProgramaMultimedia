@@ -32,6 +32,7 @@
         android:textColorHint="@color/bordeaux"
         app:endIconMode="clear_text"
         app:helperText="Required"
+        android:hint="Mail"
         app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@id/pass"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -46,7 +47,6 @@
             android:layout_height="match_parent"
             android:background="@null"
 
-            android:hint="Mail"
             android:padding="10dp">
 
         </com.google.android.material.textfield.TextInputEditText>
@@ -81,6 +81,7 @@
         >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passText"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint=" "
