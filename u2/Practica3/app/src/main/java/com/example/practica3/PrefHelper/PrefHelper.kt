@@ -1,12 +1,12 @@
 package com.example.practica3.PrefHelper
 
 import android.content.Context
-import java.util.prefs.Preferences
+import com.example.practica3.Clases.Noticia
+
 
 class PrefHelper(val context: Context) {
-    val SHARED_NAME= "mydatabase"
-    val SHARED_USER= "user"
-    private val sharedPreferences=context.getSharedPreferences(SHARED_NAME, Context.MODE_PRIVATE)
+
+    private val sharedPreferences=context.getSharedPreferences("shared", 0)
     fun guardarString(key:String, values:String){
         sharedPreferences.edit().putString(key,values).apply()
     }
