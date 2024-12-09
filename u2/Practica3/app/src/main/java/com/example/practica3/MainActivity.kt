@@ -31,9 +31,7 @@ class MainActivity : AppCompatActivity() {
 //        prefHelper.limpiar()
     }
 
-    fun comprobar() {
 
-    }
 
     fun cambioPantalla(boton: Button) {
         boton.setOnClickListener {
@@ -69,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         binding.userText.setText(user)
         binding.passText.setText(pass)
     }
-
+//función no utilizada para la practica
     fun identif(tiet: TextInputEditText) {
         tiet.setOnClickListener {
             val Pref = getPreferences(MODE_PRIVATE)

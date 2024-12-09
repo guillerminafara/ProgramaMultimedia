@@ -31,7 +31,7 @@ class MainActivity2 : AppCompatActivity() {
     fun noticia() {
         val nombre= prefHelper.getStrings("ultimaNoticia", "")
         if(nombre!=""){
-            Toast.makeText(this, " $nombre ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$nombre", Toast.LENGTH_SHORT).show()
         }
 
     }
