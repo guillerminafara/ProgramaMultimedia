@@ -26,6 +26,7 @@ class MainActivity2 : AppCompatActivity() {
         val atras = binding.atras
         recyclerV()
         atras(atras)
+        noticia()
     }
 
     fun noticia() {
@@ -42,7 +43,7 @@ class MainActivity2 : AppCompatActivity() {
         binding.recyclerMain2.adapter = NoticiasAdapter(NoticiaProvider.listaNoticias)
         { noticia ->
             prefHelper.guardarString("ultimaNoticia", noticia.titulo)
-            noticia()
+
             
             val uri: Uri = Uri.parse(noticia.enlace)
             val intent = Intent(Intent.ACTION_VIEW, uri)

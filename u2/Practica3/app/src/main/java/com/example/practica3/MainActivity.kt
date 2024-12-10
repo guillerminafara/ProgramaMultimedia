@@ -47,17 +47,17 @@ class MainActivity : AppCompatActivity() {
 
         prefHelper.guardarString("user", user)
         prefHelper.guardarString("pass", pass)
-        Toast.makeText(this, " $user, $pass", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(this, " $user, $pass", Toast.LENGTH_SHORT).show()
     }
 
     fun recordar(): String {
 
-        val user = prefHelper.getStrings("user", "fail")
+        val user = prefHelper.getStrings("user", "")
         return user
     }
 
     fun recordarPass(): String {
-        val pass = prefHelper.getStrings("pass", "failpass")
+        val pass = prefHelper.getStrings("pass", "")
         return pass
     }
 
