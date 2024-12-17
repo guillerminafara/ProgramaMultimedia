@@ -2,8 +2,6 @@ package com.example.foodly.Pantallas
 
 import android.util.Log
 import android.util.Patterns
-import android.widget.Toast
-import android.widget.Toast.makeText
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -20,26 +18,21 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.paint
-import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.foodly.R
-import com.google.firebase.Firebase
+import com.example.foodly.ViewModel.ViewModelLogin
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
-import org.intellij.lang.annotations.Pattern
 
 @Composable
-fun Login() {
+fun Login(viewModel: ViewModelLogin) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -60,13 +53,17 @@ fun Login() {
                     .padding(20.dp),
                 verticalArrangement = Arrangement.SpaceAround
             ) {
-                var user by rememberSaveable { mutableStateOf("") }
-                var pass by rememberSaveable { mutableStateOf("") }
-                var verificar by rememberSaveable { mutableStateOf(false) }
-                var inicio by remember { mutableStateOf(false) }
+//                var user by rememberSaveable { mutableStateOf("") }
+//                var pass by rememberSaveable { mutableStateOf("") }
+//                var verificar by rememberSaveable { mutableStateOf(false) }
+//                var inicio by remember { mutableStateOf(false) }
+                val user by viewModel.user.observeAsState("")
+                val pass by viewModel.pass.observeAsState("")
+                val verificar by viewModel.comprobar.observeAsState(false)
+
                 TextField(
                     value = user,
-                    onValueChange = { valor -> user = valor; verificar = validaUser(valor, pass) },
+                    onValueChange = { viewModel.validaUser(it,pass) },
                     label = { Text("example@mail.com", color = Color.Gray) },
                     leadingIcon = {
                         Icon(
@@ -80,7 +77,7 @@ fun Login() {
 
                 TextField(
                     value = pass,
-                    onValueChange = { pass = it; verificar = validaUser(user, it) },
+                    onValueChange = {viewModel.validaUser(user,it)},
                     label = { Text("Password", color = Color.Gray) },
                     leadingIcon = {
                         Icon(
@@ -93,18 +90,7 @@ fun Login() {
 
                 Button(
                     onClick = {
-                        val auth = FirebaseAuth.getInstance()
-                        var devolver=false
-                        Log.i("nicio","btnaction")
-                        auth.signInWithEmailAndPassword(user, pass).addOnCompleteListener {
-                            if (it.isSuccessful) {
-                                devolver=true
-                                Log.i("nicio","correct")
 
-                            }else{
-                                Log.i("nicio","incorrect")
-                            }
-                        }
                     },
                     modifier = Modifier.fillMaxWidth(),
                     enabled = verificar
@@ -117,9 +103,10 @@ fun Login() {
     }
 }
 
+@Composable
 fun createSess(user:String, pass:String):Boolean {
     val auth = FirebaseAuth.getInstance()
-    var devolver=false
+    var devolver by remember {  mutableStateOf(false) }
     auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener{
         if(it.isSuccessful) {
             devolver=true
@@ -128,10 +115,11 @@ fun createSess(user:String, pass:String):Boolean {
     return devolver
 }
 
-fun inicioSEsion(user:String, pass:String) {
+@Composable
+fun inicioSEsion(user:String, pass:String): Boolean {
     val auth = FirebaseAuth.getInstance()
-    var devolver=false
-    auth.signInWithEmailAndPassword(user, pass).addOnCompleteListener {
+    var devolver by remember {  mutableStateOf(false)}
+        auth.signInWithEmailAndPassword(user, pass).addOnCompleteListener {
         if (it.isSuccessful) {
             devolver=true
             Log.i("nicio","correct")
@@ -139,8 +127,9 @@ fun inicioSEsion(user:String, pass:String) {
         }else{
             Log.i("nicio","incorrect")
         }
-    }
 
+    }
+    return devolver
 }
 fun validaUser(user: String, pass: String): Boolean {
     val bandera = Patterns.EMAIL_ADDRESS.matcher(user).matches() && pass.length >= 8
