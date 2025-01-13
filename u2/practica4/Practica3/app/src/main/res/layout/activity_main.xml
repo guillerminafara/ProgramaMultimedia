@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/periodico2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+    </ImageView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/user"
+        android:layout_width="270dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="250dp"
+        android:inputType="text"
+        app:boxBackgroundColor="@color/topo"
+        app:boxStrokeWidth="2dp"
+        android:textColorHint="@color/bordeaux"
+        app:endIconMode="clear_text"
+        app:helperText="Required"
+        android:hint="Mail"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/pass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/icon_person"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+
+            android:padding="10dp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/periodico2"
+
+            >
+
+        </ImageView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/pass"
+        android:layout_width="270dp"
+        android:layout_height="75dp"
+        android:textColorHint="@color/bordeaux"
+        android:hint="Password"
+        app:boxBackgroundColor="@color/topo"
+        app:startIconDrawable="@drawable/key"
+
+        app:passwordToggleEnabled="true"
+        app:layout_constraintBottom_toTopOf="@id/boton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint=" "
+            android:inputType="textPassword"
+            android:background="@null"
+            android:padding="10dp"
+            >
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:backgroundTint="@color/bordeaux"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="0dp"
+        android:text="Login"
+        android:textSize="25dp"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pass">
+
+    </Button>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

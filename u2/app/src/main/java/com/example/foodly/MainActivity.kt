@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.example.foodly.Pantallas.Login
 import com.example.foodly.Pantallas.Registro
 import com.example.foodly.ViewModel.ViewModelLogin
 
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
 
 //            com.example.foodly.Pantallas.Login(viewModel)
-                Registro(viewModel)
+                Login(viewModel)
         }
     }
 }

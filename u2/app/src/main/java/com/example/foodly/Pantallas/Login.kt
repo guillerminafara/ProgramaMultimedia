@@ -27,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.foodly.R
 import com.example.foodly.ViewModel.ViewModelLogin
 import com.google.firebase.auth.FirebaseAuth
@@ -97,7 +98,10 @@ fun Login(viewModel: ViewModelLogin) {
                 ) {
                     Text("Sign In")
                 }
+                Button(   onClick = {
 
+                },
+                    content ={ Text("Registrate") } )
             }
         }
     }

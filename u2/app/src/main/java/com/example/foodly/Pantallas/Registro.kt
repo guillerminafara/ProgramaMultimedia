@@ -10,14 +10,16 @@ import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.foodly.ViewModel.ViewModelLogin
-@Preview()
+
 
 
 @Composable
 fun Registro(viewModel: ViewModelLogin) {
     val userR by viewModel.userR.observeAsState("")
     val passR by viewModel.passR.observeAsState("")
+
 
     Column (modifier = Modifier.fillMaxSize()
         .padding(20.dp)){
