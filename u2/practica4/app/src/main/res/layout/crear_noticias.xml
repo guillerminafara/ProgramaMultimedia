@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4Noticias"
+
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/bordeaux"
+        android:elevation="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/atras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:hint="Title"
+                android:textColorHint="@color/bordeaux"
+                app:boxBackgroundColor="@color/topo"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:helperText="Required"
+                app:layout_constraintBottom_toTopOf="@+id/body"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:passwordToggleEnabled="true"
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:padding="10dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/body"
+                android:layout_width="270dp"
+                android:layout_height="70dp"
+                android:layout_margin="20dp"
+                android:hint="Desarrollo"
+                android:textColorHint="@color/bordeaux"
+                app:boxBackgroundColor="@color/topo"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:helperText="Required"
+                app:layout_constraintBottom_toTopOf="@id/date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                app:passwordToggleEnabled="true"
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bodyText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top|start"
+                    android:hint=" "
+                    android:inputType="textMultiLine"
+                    android:minLines="6"
+                    android:padding="10dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:hint="Fecha"
+                android:textColorHint="@color/bordeaux"
+                app:boxBackgroundColor="@color/topo"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:helperText="Required"
+                app:layout_constraintBottom_toTopOf="@id/link"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/body"
+                app:passwordToggleEnabled="true"
+
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:padding="10dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/link"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:hint="Link a la Imagen"
+                android:textColorHint="@color/bordeaux"
+                app:boxBackgroundColor="@color/topo"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:helperText="Required"
+                app:layout_constraintBottom_toTopOf="@+id/linkNoticia"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date"
+                app:passwordToggleEnabled="true"
+
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/linkText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:padding="10dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/linkNoticia"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:hint="Link a la Imagen"
+                android:textColorHint="@color/bordeaux"
+                app:boxBackgroundColor="@color/topo"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/black"
+                app:helperText="Required"
+                app:layout_constraintBottom_toTopOf="@+id/Boton"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/link"
+                app:passwordToggleEnabled="true"
+
+                tools:ignore="NotSibling">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/linkNoticiaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:hint=" "
+                    android:inputType="text"
+                    android:padding="10dp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/Boton"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/bordeaux"
+                android:text="Agregar Noticia"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linkNoticia"
+                android:layout_marginLeft="78dp"
+                android:layout_marginTop="20dp"
+                >
+
+
+            </Button>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

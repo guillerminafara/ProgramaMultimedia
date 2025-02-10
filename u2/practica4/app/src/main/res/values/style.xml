@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
+        <!-- Cambiar color de checkboxes cuando están activados -->
+        <item name="colorControlActivated">@color/red</item>
+    </style>
+</resources>
