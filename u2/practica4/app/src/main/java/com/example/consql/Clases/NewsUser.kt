@@ -9,7 +9,7 @@ import androidx.room.ForeignKey
     primaryKeys = ["userId", "noticeId"],
     foreignKeys = [
         ForeignKey(entity = UserEntity::class, parentColumns = ["id"], childColumns = ["userId"]),
-        ForeignKey(entity = NoticeEntity::class, parentColumns = ["id"], childColumns = ["noticeId"])
+        ForeignKey(entity = NewsEntity::class, parentColumns = ["id"], childColumns = ["noticeId"])
     ]
 )
 data class FavoriteEntity(

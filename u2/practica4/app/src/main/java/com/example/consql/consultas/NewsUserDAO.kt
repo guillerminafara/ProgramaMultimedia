@@ -9,7 +9,10 @@ import com.example.consql.Clases.FavoriteEntity
 
 
 @Dao
-interface NoticeUserDAO {
+interface NewsUserDAO {
+    @Query("SELECT * FROM FavoriteEntity WHERE userId= :idUser AND noticeId= :idNews limit 1")
+    suspend fun getFavoriteByID(idUser: Int, idNews:Int): FavoriteEntity
+
     @Query("SELECT * FROM FavoriteEntity")
     suspend fun getAllFavorite(): MutableList<FavoriteEntity>
     @Insert

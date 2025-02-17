@@ -1,30 +1,24 @@
-package com.example.consql.di
-
-import android.app.Application
-import android.content.Context
-import androidx.room.Room
-import androidx.test.espresso.core.internal.deps.dagger.Module
-import androidx.test.espresso.core.internal.deps.dagger.Provides
-import com.example.consql.Clases.NoticeEntity
-import com.example.consql.consultas.Database
-
-import javax.inject.Singleton
-
-
-class NoticeRoom:Application(){
-
-    companion object{
-        lateinit var database: Database
-    }
-
-    override fun onCreate() {
-        super.onCreate()
-        database=Room.databaseBuilder(this,
-            Database::class.java,
-            "Database")
-                .build()
-    }
-}
+//package com.example.consql.di
+//
+//import android.app.Application
+//import androidx.room.Room
+//import com.example.consql.consultas.Database
+//
+//
+//class NoticeRoom:Application(){
+//
+//    companion object{
+//        lateinit var database: Database
+//    }
+//
+//    override fun onCreate() {
+//        super.onCreate()
+//        database=Room.databaseBuilder(this,
+//            Database::class.java,
+//            "Database")
+//                .build()
+//    }
+//}
 
 //@Module
 //@InstallIn(SingletonComponent::clas)

@@ -10,8 +10,14 @@ import com.example.consql.Clases.UserEntity
 
 @Dao
 interface UserDAO {
+    @Query("SELECT * FROM EntityUser WHERE user LIKE :username")
+    suspend fun getUser(username: String): UserEntity?
+
+    @Query("SELECT * FROM EntityUser WHERE id = :id")
+    suspend fun getUserById(id: Int): UserEntity?
+
     @Query("SELECT * FROM EntityUser")
-    suspend fun getAllStores(): MutableList<UserEntity>
+    suspend fun getAllUsers(): MutableList<UserEntity>
     @Insert
     suspend fun addUser(userEntity: UserEntity)
     @Update

@@ -10,7 +10,10 @@ class UserApplication:Application() {
 
     override fun onCreate() {
         super.onCreate()
-        database= Room.databaseBuilder(this,Database::class.java,"UserDatabase").build()
+        database= Room.databaseBuilder(this,
+            Database::class.java,
+            "UserDatabase")
+            .build()
     }
 
 }

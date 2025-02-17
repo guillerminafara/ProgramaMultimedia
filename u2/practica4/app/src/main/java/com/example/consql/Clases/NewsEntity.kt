@@ -7,23 +7,24 @@ import androidx.room.PrimaryKey
 
 @Entity(
     tableName = "EntityNotice",
-            foreignKeys =[ForeignKey(
+    foreignKeys = [ForeignKey(
         entity = UserEntity::class,
         parentColumns = ["id"],
-        childColumns = ["userId"],
+        childColumns = ["idUser"],
         onDelete = ForeignKey.CASCADE
     )],
-    indices = [Index(value = ["userId"])]
+     indices = [Index(value = ["idUser"])]
 )
 
-class NoticeEntity(
+class NewsEntity(
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
     var titulo: String = "",
     var resumen: String = "",
     var fecha: String = "",
     var imagen: String = "",
-    var enlace: String = ""
+    var enlace: String = "",
+    var idUser: Int
 )
 
 
