@@ -26,7 +26,9 @@ import com.example.consql.consultas.UserApplication
 import com.example.consql.databinding.ActivityMain2Binding
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -34,7 +36,12 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityMain2Binding
     private lateinit var prefHelper: PrefHelper
     private lateinit var adapter: NoticiasAdapter
-    private lateinit var newsList: MutableList<NewsEntity>
+    private var newsList: MutableList<NewsEntity> = mutableListOf()
+    val customScope = CoroutineScope(Dispatchers.Main)
+
+    private lateinit var newsFavoritesList: MutableList<FavoriteEntity>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val user = intent.getParcelableExtra<UserEntity>("USER")
@@ -47,34 +54,14 @@ class MainActivity2 : AppCompatActivity() {
             )
         }
         prefHelper = PrefHelper(this)
+//        cleanRecycler()
         val back = binding.atras
-//        recyclerV()
+        recycler()
         atras(back)
         noticia()
         agregarNoticia(binding.btnSave)
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerMain2)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        lifecycleScope.launch {
-            val user = intent.getParcelableExtra<UserEntity>("USER")
-            newsList = UserApplication.database.newsDao().getAllNotice().toMutableList()
-            adapter = NoticiasAdapter(newsList,
-                onClick = { noticia ->
-                    prefHelper.guardarString("ultimaNoticia", noticia.titulo)
 
-                    val uri: Uri = Uri.parse(noticia.enlace)
-                    val intent = Intent(Intent.ACTION_VIEW, uri)
-                    Log.d("NEWSSS", " not EMPTY newsList")
-                    startActivity(intent)
-                },
-                onLongClick = { noticia -> deleteNews(noticia) },
-                user?.id!!,
-                { e, r -> insertLikes(e, r) },
-                { e, r -> removeLikes(e, r) },
-                { e, r, t -> checkedLikes(e, r, t) }
-            )
-            recyclerView.adapter = adapter
-        }
-
+        favs()
     }
 
     fun cambioFavorites() {
@@ -116,6 +103,48 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
 
+    fun recycler() {
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerMain2)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        lifecycleScope.launch {
+            val user = intent.getParcelableExtra<UserEntity>("USER")
+            newsList = UserApplication.database.newsDao().getAllNotice().toMutableList()
+//            newsFavoritesList= UserApplication.database.newsUserDao().getAllFavoriteByID(user?.id!!)
+            adapter = NoticiasAdapter(
+                newsList,
+                onClick = { noticia ->
+                    prefHelper.guardarString("ultimaNoticia", noticia.titulo)
+
+                    val uri: Uri = Uri.parse(noticia.enlace)
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    Log.d("NEWSSS", " not EMPTY newsList")
+                    startActivity(intent)
+                },
+                onLongClick = { noticia -> deleteNews(noticia) },
+                user?.id!!,
+//                lifecycleScope = customScope,
+            )
+//
+//                { e, r -> insertLikes(e, r) },
+//                { e, r -> removeLikes(e, r) },
+//                { e, r, t -> checkedLikes(e, r, t) },
+//                binding.Fav,
+//                newsFavoritesList
+//            )
+            recyclerView.adapter = adapter
+        }
+    }
+    fun cleanRecycler(){
+        lifecycleScope.launch {
+            newsList.clear()
+            val news = UserApplication.database.newsDao().getAllNotice()
+            if (news != null) {
+                newsList.addAll(news)
+            }
+            adapter.notifyDataSetChanged()
+        }
+    }
+
     fun insertLikes(idUser: Int, id: Int) {
         lifecycleScope.launch {
             UserApplication.database.newsUserDao().addFavorite(FavoriteEntity(idUser, id))
@@ -131,15 +160,30 @@ class MainActivity2 : AppCompatActivity() {
     fun checkedLikes(idUser: Int, id: Int, like: CheckBox) {
         lifecycleScope.launch(Dispatchers.IO) {
             val likesEntity = UserApplication.database.newsUserDao().getFavoriteByID(idUser, id)
-
             if (likesEntity != null) {
                 like.isChecked = true
             }
-
-
         }
+    }
 
+    fun favoriteLayout(idUser: Int, idNews: Int, notify: () -> Unit) {
+        binding.Fav.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                val favs = UserApplication.database.newsUserDao()
+                    .getFavoriteByID(idUser = idUser, idNews = idNews)
+                notify()
+            }
+        }
+    }
 
+    fun favs() {
+        val user = intent.getParcelableExtra<UserEntity>("USER")
+        binding.Fav.setOnClickListener {
+            val intent = Intent(this, MainActivity3Likes::class.java)
+            intent.putExtra("USER", user)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun noticia() {
@@ -150,40 +194,6 @@ class MainActivity2 : AppCompatActivity() {
 
     }
 
-//    fun recyclerV() {
-//        val linearLayout = LinearLayoutManager(this)
-//
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            withContext(Dispatchers.Main) {
-//                var newsList = database.noticeDao().getAllNotice()
-//                if (newsList != null) {
-//                    binding.recyclerMain2.layoutManager = linearLayout
-//                    binding.recyclerMain2.adapter = NoticiasAdapter(newsList)
-//                    { noticia ->
-//                        prefHelper.guardarString("ultimaNoticia", noticia.titulo)
-//
-//                        val uri: Uri = Uri.parse(noticia.enlace)
-//                        val intent = Intent(Intent.ACTION_VIEW, uri)
-//                        Log.d("NEWSSS", " not EMPTY newsList")
-//                        startActivity(intent)
-//
-//                    }
-//                } else {
-//                    Log.d("USERR", "EMPTY newsList")
-//                }
-//            }
-//        }
-//    }
-
-    //    fun load(): MutableList<NewsEntity>{
-//       var newsList= mutableListOf<NewsEntity>()
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            withContext(Dispatchers.Main) {
-//             newsList = database.noticeDao().getAllNotice()
-//            }
-//        }
-//        return newsList
-//    }
     private fun mostrarDetalles(news: NewsEntity) {
         Toast.makeText(this, "Detalles de: ${news.titulo}", Toast.LENGTH_SHORT).show()
     }
@@ -194,6 +204,16 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        customScope.cancel() // Evita memory leaks
+//    }
+
+    override fun onResume() {
+        super.onResume()
+        recycler() // 🔹 Método para volver a cargar el RecyclerView con todas las noticias
     }
 
 
