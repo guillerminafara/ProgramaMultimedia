@@ -109,6 +109,7 @@ class MainActivity2 : AppCompatActivity() {
         lifecycleScope.launch {
             val user = intent.getParcelableExtra<UserEntity>("USER")
             newsList = UserApplication.database.newsDao().getAllNotice().toMutableList()
+//            Log.d("pag3", " pagina 2 ${user?.id}, ${newsList}, ")
 //            newsFavoritesList= UserApplication.database.newsUserDao().getAllFavoriteByID(user?.id!!)
             adapter = NoticiasAdapter(
                 newsList,
@@ -122,7 +123,19 @@ class MainActivity2 : AppCompatActivity() {
                 },
                 onLongClick = { noticia -> deleteNews(noticia) },
                 user?.id!!,
-//                lifecycleScope = customScope,
+                onLikeClick = { noticia, isChecked ->lifecycleScope.launch {
+                    if (isChecked ) {
+                        Log.d("LIKE", " ${user.id}, ${noticia.id} true")
+                        insertLikes(user.id, noticia.id)
+
+                    } else {
+                        Log.d("LIKE", " ${user.id}, ${noticia.id} fasle")
+                        removeLikes(user.id, noticia.id)
+                    }
+
+                }},
+//
+                { e, r, t -> checkedLikes(e, r, t) }
             )
 //
 //                { e, r -> insertLikes(e, r) },
@@ -134,16 +147,7 @@ class MainActivity2 : AppCompatActivity() {
             recyclerView.adapter = adapter
         }
     }
-    fun cleanRecycler(){
-        lifecycleScope.launch {
-            newsList.clear()
-            val news = UserApplication.database.newsDao().getAllNotice()
-            if (news != null) {
-                newsList.addAll(news)
-            }
-            adapter.notifyDataSetChanged()
-        }
-    }
+
 
     fun insertLikes(idUser: Int, id: Int) {
         lifecycleScope.launch {

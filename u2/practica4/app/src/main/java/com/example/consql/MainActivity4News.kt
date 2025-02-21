@@ -66,7 +66,7 @@ class MainActivity4News : AppCompatActivity() {
                 if (id > 0) {
                     Log.d("Noticiaaaaa", "Noticia agregada correctamente")
                     Toast.makeText(this@MainActivity4News, "Noticia agregada correctamente", Toast.LENGTH_SHORT).show()
-
+                    atras()
                 } else {
                     Log.d("Noticiaaaaa", "Error al agregar la noticia")
                     Toast.makeText(
@@ -75,6 +75,6 @@ class MainActivity4News : AppCompatActivity() {
                 }
             }
         }
-        atras()
+
     }
 }

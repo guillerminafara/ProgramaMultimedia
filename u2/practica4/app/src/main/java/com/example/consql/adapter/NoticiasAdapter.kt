@@ -26,15 +26,16 @@ class NoticiasAdapter(
     private val onClick: (NewsEntity) -> Unit,
     private val onLongClick: (NewsEntity) -> Unit,
     private val idUser: Int,
+    private val onLikeClick: (NewsEntity, Boolean) -> Unit,
 //    private val lifecycleScope: CoroutineScope,
 //    private val insertLikes: (Int, Int) -> Unit,
 //    private val removeLikes: (Int, Int) -> Unit,
-//    private val checkedLikes: (Int, Int, CheckBox) -> Unit,
+    private val checkedLikes: (Int, Int, CheckBox) -> Unit,
 //    private val fav: MaterialCheckBox,
 //    private var newsFavoritesList: MutableList<FavoriteEntity>,
 //    param: (Int, Int, ()-> Unit) -> Unit
-) :
-    RecyclerView.Adapter<NoticiasAdapter.NoticiaHolder>() {
+) :RecyclerView.Adapter<NoticiasAdapter.NoticiaHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoticiaHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return NoticiaHolder(layoutInflater.inflate(R.layout.news_activity, parent, false))
@@ -103,24 +104,23 @@ class NoticiasAdapter(
             resumenNoticia.text = noticiasModel.resumen
             fechaNoticia.text = noticiasModel.fecha
             Glide.with(itemView.context).load(noticiasModel.imagen).into(imagenNoticia)
+            checkedLikes(idUser, id, like)
             cardNoticia.setOnClickListener {
                 onClick(noticiasModel)
             }
 //            favoriteLayout(idUser,id)
-//            cardNoticia.setOnLongClickListener {
-//                onLongClick(noticiasModel)
-//                true
-//            }
-//            like.setOnClickListener {
-//
-//                    if (like.isChecked) {
-//                        Log.d("Likes", "idNoticias: ${id}, ${idUser}")
-//                        insertLikes(idUser, id)
-//                    } else {
-//                        removeLikes(idUser, id)
-//                    }
-//
-//            }
+            cardNoticia.setOnLongClickListener {
+                onLongClick(noticiasModel)
+                true
+            }
+            like.setOnClickListener{
+
+                if(like.isChecked){
+                    checkedLikes(idUser, id, like)
+                }
+//            like.setOnCheckedChangeListener()  {_, isChecked->//setOnClickListener
+                onLikeClick(noticiasModel, like.isChecked)
+            }
 
         }
 
