@@ -5,41 +5,156 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b161f24f-3f43-4876-ae76-44385910916c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/Clases/Noticia.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/Clases/NoticiaProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/Clases/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/MainActivity2.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/PrefHelper/PrefHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/consql/adapter/NoticiasAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/baseline_arrow_back_ios_24.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/drawable/periodico.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/activity_main2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/res/layout/noticias_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CentroComercial.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CentroComerciall.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CentrosComerciales.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../CentrosComercialesFara.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica3/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica3/app/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica3/app/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Practica3/app/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/src/main/res/drawable/icon_person.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/icon_person.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/src/main/res/drawable/key.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/key.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Practica3/app/src/main/res/drawable/periodico2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/res/drawable/periodico2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/src/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/src/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/app/src/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Practica3/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Practica3/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vencida/.idea/caches/deviceStreaming.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vencida/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vencida/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vencida/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../vencida/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/androidTest/java/com/example/centroscomerciales/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/MainActivity2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/Musica.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/adapters/CCAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/adapters/TiendaAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/clases/CentrosComerciales.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/clases/Provider.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/clases/Tiendas.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/java/com/example/centroscomerciales/conexiones/StoreApplication.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/drawable/baseline_arrow_back_ios_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/layout/activity_main2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/layout/centros.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/layout/tiendas.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/raw/nonkilliin6.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/app/src/test/java/com/example/centroscomerciales/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CentrosComerciales/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/androidTest/java/com/example/practica3/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/Clases/Noticia.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/Clases/NoticiaProvider.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/Clases/User.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/MainActivity2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/PrefHelper/PrefHelper.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/PrefHelper/prefhelp2.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/java/com/example/practica3/adapter/NoticiasAdapter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/baseline_arrow_back_ios_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/icon_person.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/key.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/periodico.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/drawable/periodico2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/layout/activity_main2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/layout/noticias_activity.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/app/src/test/java/com/example/practica3/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradle/libs.versions.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Practica3/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../conSql/app/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,9 +167,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2rwYVIpcYYzdJzhbPjKPRHEygYC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,7 +185,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/faram/Desktop/Asignaturas/ProgramacionMultimedia/ProgramaMultimedia/u2/practica4"
+    "last_opened_file_path": "C:/Users/faram/Desktop/Asignaturas/ProgramacionMultimedia/ProgramaMultimedia/u2/practica4/app"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
